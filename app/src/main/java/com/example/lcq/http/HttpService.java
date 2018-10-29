@@ -24,7 +24,7 @@ public interface HttpService {
      * @return
      */
     @FormUrlEncoded
-    @POST("phone/ugm4_ugcCates.xhtml")
+    @POST("")
     Observable<BaseHttpResult<List<ZhongshuohaoCates>>> query(@Field("userName") String username);
 
 }

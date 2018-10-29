@@ -5,5 +5,5 @@ package com.example.lcq.utils;
  */
 
 public class Constant {
-    public static String BASE_URL = "https://mobile.cn-healthcare.com/appserver/";
+    public static String BASE_URL = "";
 }

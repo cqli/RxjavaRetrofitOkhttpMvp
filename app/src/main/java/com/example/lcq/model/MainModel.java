@@ -26,9 +26,6 @@ public class MainModel extends BaseModel {
     public boolean query( @NonNull final InfoHint
             infoHint) {
 
-        if (infoHint == null)
-            throw new RuntimeException("InfoHint不能为空");
-
         httpService.query("")
                 .compose(new CommonTransformer<List<ZhongshuohaoCates>>())
                 .subscribe(new CommonSubscriber<List<ZhongshuohaoCates>>(MyApplication.getmContext()) {
