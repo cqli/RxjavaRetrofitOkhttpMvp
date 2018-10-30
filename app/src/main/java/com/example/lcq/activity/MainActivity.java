@@ -1,6 +1,8 @@
 package com.example.lcq.activity;
 
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.view.View;
 import android.widget.TextView;
 
@@ -11,7 +13,12 @@ import com.example.lcq.presenter.MainPresenter;
 
 public class MainActivity extends BaseActivity<MainPresenter> implements MainContract.MainView {
     TextView tv_click;
-
+    Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+        }
+    };
     @Override
     protected MainPresenter loadPresenter() {
         return new MainPresenter();
