@@ -8,6 +8,9 @@ import android.widget.Toast;
 import com.example.lcq.mvp.IView;
 import com.example.lcq.utils.LogUtils;
 
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
+
 
 /**
  * Created by lcq on 2016/9/13.
@@ -18,12 +21,14 @@ public abstract class BaseActivity<P extends BasePresenter> extends FragmentActi
     protected View view;
 
     protected P mPresenter;
+    private Unbinder bind;
 
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getView());
+        bind = ButterKnife.bind(this);
         mPresenter = loadPresenter();
         initCommonData();
         initView();
@@ -98,6 +103,7 @@ public abstract class BaseActivity<P extends BasePresenter> extends FragmentActi
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        bind.unbind();
         if (mPresenter != null)
             mPresenter.detachView();
     }

@@ -5,8 +5,6 @@ import android.content.Context;
 import android.content.pm.PackageManager;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.os.Handler;
-import android.os.Message;
 import android.telephony.TelephonyManager;
 import android.util.Log;
 import android.view.Display;
@@ -15,24 +13,16 @@ import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.webkit.CookieManager;
 import android.webkit.CookieSyncManager;
-import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.widget.EditText;
 
 import com.example.lcq.MyApplication;
-import com.google.gson.Gson;
 
-import java.io.BufferedReader;
-import java.io.DataOutputStream;
 import java.io.File;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
 import java.net.InetAddress;
 import java.net.NetworkInterface;
 import java.net.SocketException;
-import java.net.URL;
 import java.util.Enumeration;
 
 /**
